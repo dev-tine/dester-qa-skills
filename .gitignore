@@ -8,3 +8,9 @@ storage-state*.json
 state.json
 .env
 .env.*
+
+# Screenshots may hold real data, never commit them
+*.png
+*.jpg
+*.jpeg
+screenshots/
