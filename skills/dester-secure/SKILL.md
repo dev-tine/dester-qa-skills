@@ -4,7 +4,7 @@ description: "Authorized-only security testing of a web system the user owns or 
 metadata:
   author: Destine April
   version: 0.1.0
-  license: TBD (placeholder, MIT planned)
+  license: MIT
   suite: dester
 ---
 

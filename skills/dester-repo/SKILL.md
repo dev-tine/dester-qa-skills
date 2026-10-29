@@ -4,7 +4,7 @@ description: "Read a code repository READ ONLY to find risky areas, routes, role
 metadata:
   author: Destine April
   version: 0.1.0
-  license: TBD (placeholder, MIT planned)
+  license: MIT
   suite: dester
 ---
 
@@ -63,7 +63,7 @@ Collect, with file path and line for each (so each claim is checkable):
 - **Security smell notes** (do not exploit; pass to `dester-secure` and the owner only): missing authorization,
   secrets in code, unsafe string-built queries, disabled checks.
 
-Rank areas by risk (Impact x Likelihood, `dester-explore` references/charters.md) and give the top 5 with reasons.
+Rank areas by risk (Impact x Likelihood, `~/.claude/skills/dester-explore/references/charters.md`) and give the top 5 with reasons.
 
 ## Job B: Code to spec rows and cases
 

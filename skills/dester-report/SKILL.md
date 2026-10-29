@@ -4,7 +4,7 @@ description: "Turn QA findings into reports: a bug report per defect (steps, exp
 metadata:
   author: Destine April
   version: 0.1.0
-  license: TBD (placeholder, MIT planned)
+  license: MIT
   suite: dester
 ---
 

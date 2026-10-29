@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+# QA project folders and secrets never belong in this repo
+qa-*/
+.dester-sessions/
+*.done
+storage-state*.json
+state.json
+.env
+.env.*

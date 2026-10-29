@@ -4,7 +4,7 @@ description: "Create client-ready documentation and visual aids for a system tha
 metadata:
   author: Destine April
   version: 0.1.0
-  license: TBD (placeholder, MIT planned)
+  license: MIT
   suite: dester
 ---
 

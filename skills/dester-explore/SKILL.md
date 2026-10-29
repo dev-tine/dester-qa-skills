@@ -4,7 +4,7 @@ description: "Explore a system that has no documentation (no BRD, no specs) and 
 metadata:
   author: Destine April
   version: 0.1.0
-  license: TBD (placeholder, MIT planned)
+  license: MIT
   suite: dester
 ---
 
@@ -119,7 +119,8 @@ Goal: a first map in 15 to 30 minutes. Do not test deeply yet.
 For every rule you observed, write one row in `02_DERIVED_SPEC.md`:
 `ID | Rule (plain words) | Where seen | Role | Confidence | Evidence`.
 - Confidence: **Seen** (observed, with evidence), **Hypothesis** (from code or guess), **Unclear** (looks wrong or
-  inconsistent, goes to `questions.md`).
+  inconsistent, goes to `questions.md`), **Confirmed (client)** (the owner said so, from a Discovery Pack or an
+  answer; still checked against the system).
 - Never invent limits, formulas, messages or thresholds. If the screen does not say it, mark Unclear.
 - The expected result of a future test comes from this spec or from the owner, **never only from what the app
   did** (otherwise a bug becomes the expected behavior). Mark rows where that is the case `(observed only)`.

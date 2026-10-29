@@ -4,7 +4,7 @@ description: "Write test cases for a system, feature or screen from a derived sp
 metadata:
   author: Destine April
   version: 0.1.0
-  license: TBD (placeholder, MIT planned)
+  license: MIT
   suite: dester
 ---
 
@@ -52,7 +52,7 @@ Cases labelled Observed or Hypothesis are listed in `questions.md` so the owner 
 3. Add **role cases**: for each role and each key action, allowed or denied, and what the user sees (menu, button,
    direct URL). Add **data accuracy cases**: the calculation done by hand (show the working) versus what the
    system shows.
-4. Prioritize with risk (`dester-explore` references/charters.md): P1 money, data loss, security, core flow;
+4. Prioritize with risk (`~/.claude/skills/dester-explore/references/charters.md`): P1 money, data loss, security, core flow;
    P2 common features; P3 cosmetic or rare.
 5. Never invent limits, formulas or message text. If unknown: write the case with `Expected: TBD, ask owner` and add a
    question. A guessed expected result is a trap.

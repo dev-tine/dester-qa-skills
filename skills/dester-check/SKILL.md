@@ -4,7 +4,7 @@ description: "Turn tested cases into repeatable Playwright checks, and provide t
 metadata:
   author: Destine April
   version: 0.1.0
-  license: TBD (placeholder, MIT planned)
+  license: MIT
   suite: dester
 ---
 
