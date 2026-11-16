@@ -16,6 +16,8 @@ It serves two uses:
   guided, with defaults, and explain QA jargon in one line.
 
 The suite (`skills/` folder):
+- `dester-init`: set up a Test Cases repo per product (module folders, MODULES.md, PRODUCT.md, templates)
+- `dester-modules`: find a product's modules from the app, code or docs, score risk, track status
 - `dester-discover`: Step 0, a Discovery Pack for the client to fill in, then reads the answers and shows the gaps
 - `dester-explore`: map an undocumented system, derived spec, charters, sessions
 - `dester-cases`: test cases (happy, positive, negative, edge, boundary), Markdown and CSV
@@ -57,5 +59,5 @@ Never edit a skill's `references/core-rules.md` or `references/glossary.md` dire
 
 ## Status
 
-v0.1.0 is early. It was linted but no skill has been field tested on a real system yet. When Destine reports what
-confuses or breaks in real use, fix the root cause in the skill, not just the one case.
+v0.2.0 is early (adds dester-init, dester-modules, one-line dester-cases). It was linted but no skill has been
+field tested on a real system yet. When Destine reports what confuses or breaks in real use, fix the root cause in the skill, not just the one case.

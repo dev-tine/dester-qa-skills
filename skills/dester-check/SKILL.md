@@ -3,12 +3,12 @@ name: dester-check
 description: "Turn tested cases into repeatable Playwright checks, and provide the browser helpers used by the other dester skills: a login helper where the human signs in (never the skill), and a read-only recon crawler. Creates a small checks project in the QA folder, writes one test per case with stable locators and cleanup, runs it, and records results with evidence. Use when the user says /dester-check, 'automate this', 'make a Playwright test', 'repeat these checks', 'regression pack', 'sign in helper', 'crawl the pages', or after cases passed and will be retested."
 metadata:
   author: Destine April
-  version: 0.1.0
+  version: 0.1.1
   license: MIT
   suite: dester
 ---
 
-# dester-check v0.1.0
+# dester-check v0.1.1
 
 Author: Destine April. Read `references/core-rules.md` first; those rules win.
 
