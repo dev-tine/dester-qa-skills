@@ -17,7 +17,8 @@ const SKIP = new RegExp(process.env.SKIP || 'logout|signout|sign-out|log-out|del
 
 fs.mkdirSync(OUT, { recursive: true });
 const browser = await chromium.launch({ headless: true, ...(CHANNEL ? { channel: CHANNEL } : {}) });
-const ctx = await browser.newContext({ storageState: SESSION, viewport: { width: 1360, height: 860 } });
+// SESSION=none for public pages (no sign-in)
+const ctx = await browser.newContext({ ...(SESSION.endsWith('none') ? {} : { storageState: SESSION }), viewport: { width: 1360, height: 860 } });
 const page = await ctx.newPage();
 
 async function snapshot(p) {
@@ -39,9 +40,11 @@ async function snapshot(p) {
       mainText: main.innerText.replace(/\s+/g, ' ').slice(0, 800),
     };
   });
-  const slug = url.pathname.replace(/\W+/g, '_').replace(/^_|_$/g, '') || 'home';
+  const hashRoute = /^#!?\//.test(url.hash) ? url.hash : '';
+  const landed = url.pathname + hashRoute;
+  const slug = landed.replace(/\W+/g, '_').replace(/^_|_$/g, '') || 'home';
   await page.screenshot({ path: path.join(OUT, `p_${slug}.png`), fullPage: true }).catch(() => {});
-  return { requested: p, landed: url.pathname, ...data, shot: `p_${slug}.png` };
+  return { requested: p, landed, ...data, shot: `p_${slug}.png` };
 }
 
 const seen = new Map();
@@ -53,10 +56,13 @@ while (queue.length && seen.size < MAXPAGES) {
   seen.set(p, snap);
   for (const l of snap.links) {
     let h = l.href;
-    if (!h || h.startsWith('#') || /^(mailto|tel|javascript):/.test(h)) continue;
+    if (!h || /^(mailto|tel|javascript):/.test(h)) continue;
     if (h.startsWith(SITE)) h = h.slice(SITE.length);
-    if (!h.startsWith('/')) continue; // external: out of scope
-    h = h.split('#')[0].split('?')[0];
+    // single-page apps with hash routes (#/orders, #!/orders): keep the route, drop plain #anchors
+    if (/^#!?\//.test(h)) h = START.split('#')[0] + h;
+    if (!h.startsWith('/')) continue; // external or plain #anchor: out of scope
+    const route = (h.match(/#!?\/.*/) || [''])[0];
+    h = h.split('#')[0].split('?')[0] + route;
     if (SKIP.test(h)) continue;
     if (!seen.has(h) && !queue.includes(h)) queue.push(h);
   }
