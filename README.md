@@ -32,6 +32,8 @@ dester-discover  ->  dester-explore  ->  dester-cases  ->  dester-lens / dester-
  dester-secure (written permission only) -> findings go to the owner only
 ```
 
+**New here? Read [GUIDE.md](GUIDE.md): one page, step by step, with exactly what to type.**
+
 ## Test cases for any product in three commands
 
 ```
