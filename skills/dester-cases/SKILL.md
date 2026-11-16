@@ -3,12 +3,12 @@ name: dester-cases
 description: "Write test cases for a module, feature or screen of any product, from a link you can open, a code repo (read only), a derived spec or exploration map, tickets or docs. One-line use: /dester-cases [module] [product] [link] [repo]. Newbie-friendly, plain language. Produces cases in five categories (happy path, positive, negative, edge, boundary) with traceability to a requirement or spec row, in Markdown and CSV ready to import into a test tool, saved per module in the product's Test Cases repo (dester-init) when there is one. Use when the user says /dester-cases, 'write test cases', 'make a test plan', 'cases for this screen', 'cases for this module', or after dester-explore or dester-modules."
 metadata:
   author: Destine April
-  version: 0.2.0
+  version: 0.2.1
   license: MIT
   suite: dester
 ---
 
-# dester-cases v0.2.0
+# dester-cases v0.2.1
 
 Author: Destine April. Read `references/core-rules.md` first; those rules win.
 
@@ -42,6 +42,8 @@ Cases labelled Observed or Hypothesis are listed in `questions.md` so the owner 
 | module, product, link (and maybe repo) | Skip the Inputs questions they answer; use defaults for the rest; say the defaults in one line; go to Fast path |
 | only `/dester-cases` | Inputs below, one group at a time |
 | "next module" | Read `MODULES.md`, take the recommended module (dester-modules Step 4), confirm in one line |
+| "answers for <module>: ..." | Match each answer to its question in `questions.md`. Update the case's Expected and set Basis `Confirmed (owner)` (or keep `Observed` if the answer is unsure). If the answer says the app is wrong, keep the expected result from the answer and note "app differs, possible bug". Move answered questions to an "Answered" list with the date. Update `coverage.md` |
+| "mark <module> as reviewed" | Only after the user says they reviewed the cases. Change `cases.md` Status to `REVIEWED by <name>, <date>`, set the module's `MODULES.md` Status to `Cases reviewed`. Open questions stay listed |
 
 Arguments in quotes when they have spaces. Anything that is not a module, product name or URL is notes. A second
 URL that points to a code host (GitHub, GitLab, Azure DevOps, Bitbucket) or a local path is the repo.
