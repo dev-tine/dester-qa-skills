@@ -20,6 +20,7 @@ The suite (`skills/` folder):
 - `dester-modules`: find a product's modules from the app, code or docs, score risk, track status
 - `dester-discover`: Step 0, a Discovery Pack for the client to fill in, then reads the answers and shows the gaps
 - `dester-explore`: map an undocumented system, derived spec, charters, sessions
+- `dester-stories`: user stories, acceptance criteria and UAT scenarios
 - `dester-cases`: test cases (happy, positive, negative, edge, boundary), Markdown and CSV
 - `dester-lens`: review one area through one lens (senior QA, per-role user, UX, accessibility, process, data
   accuracy, edge)
