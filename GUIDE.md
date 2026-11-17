@@ -51,6 +51,8 @@ Add a code repo to step 2 or 3 by putting its link at the end:
 
 | You want to | Type this |
 |---|---|
+| Write user stories and acceptance criteria (before UAT) | `/dester-stories Orders "Acme Shop" https://staging.acme.example` |
+| Build UAT scenarios from the agreed stories | `/dester-stories uat "Acme Shop"` |
 | Run some cases now, together | `run TC-ORD-001 to TC-ORD-005 with me and record results with evidence` |
 | Make repeatable automated checks (Playwright) | `/dester-check automate the P1 cases of Orders` |
 | Look at one area through a lens (UX, accessibility, numbers, a role) | `/dester-lens check the numbers in Orders` |

@@ -1,6 +1,6 @@
 # dester QA skills
 
-Author: Destine April | Version: 0.2.0 | License: MIT
+Author: Destine April | Version: 0.3.0 | License: MIT
 
 A suite of Claude Code skills for QA on systems with no documentation. Built for QA analysts and for vibe coders
 who build fast with AI and want to check their work without learning QA jargon.
@@ -13,6 +13,7 @@ who build fast with AI and want to check their work without learning QA jargon.
 | `dester-modules` | Find the modules (from the app, the code, or docs), score risk, track status, pick the next one |
 | `dester-discover` | Step 0. Client Discovery Pack (fillable, tiered, platform-specific asks for Lovable, GHL, Azure, GitHub, Claude Code), then reads the answers and shows the gaps |
 | `dester-explore` | Map an undocumented system, write a derived spec and charters, run exploratory sessions |
+| `dester-stories` | User stories with acceptance criteria (rules or Given / When / Then), INVEST check, then UAT scenarios from the agreed stories. Works for systems already built |
 | `dester-cases` | Test cases (happy, positive, negative, edge, boundary) with traceability; Markdown and import-ready CSV. One line: `/dester-cases <module> <product> <link> [repo]` |
 | `dester-lens` | Review one area through a lens: senior QA, end user per role, UX, accessibility, process, data accuracy, negative and edge |
 | `dester-repo` | Read-only code review: risk map, code to spec rows and cases, PR or diff review |
@@ -70,7 +71,7 @@ For browser work you need Node and Google Chrome (or run `npx playwright install
 
 ## Status and limits
 
-- **v0.2.0, early.** Written and linted, but still being field tested on real systems. Expect rough edges and
+- **v0.3.0, early.** Written and linted, but still being field tested on real systems. Expect rough edges and
   report them as issues.
 - Built for **Claude Code** (`SKILL.md` format, paths under `~/.claude/skills/`). Other agents are not tested.
 - Windows: use Git Bash or WSL and `./install.sh --copy`. Not tested.
